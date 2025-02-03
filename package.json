@@ -1,0 +1,25 @@
+{
+  "name": "numberclassapi",
+  "version": "1.0.0",
+  "description": "An API that takes a number and returns interesting mathematical properties about it, along with a fun fact.",
+  "homepage": "https://github.com/Ethan-net/numberClassApi#readme",
+  "bugs": {
+    "url": "https://github.com/Ethan-net/numberClassApi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ethan-net/numberClassApi.git"
+  },
+  "license": "MIT",
+  "author": "akorede",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
