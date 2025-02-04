@@ -38,7 +38,7 @@ This is a simple Node.js Express API that takes a number as input and returns in
 
 ## 📡 API Endpoint
 
-### GET `/api/classify-number?number=<value>`
+### GET `https://numberclassapi.onrender.com/api/classify-number?number=<VALUE>`
 
 #### ✅ Success Response (200 OK)
 
