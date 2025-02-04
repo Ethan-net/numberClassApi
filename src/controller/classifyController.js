@@ -10,7 +10,7 @@ exports.classifyNumber = (req, res) => {
   const { number } = req.query;
 
   if (!number || isNaN(number)) {
-    return res.status(400).json({ number: number || "undefined", error: true });
+    return res.status(400).json({ number: "alphabet", error: true });
   }
 
   const num = parseInt(number, 10);

@@ -1,3 +1,5 @@
+// src/utils.js
+
 exports.isPrime = (n) => {
   if (n < 2) return false;
   for (let i = 2; i * i <= n; i++) {
@@ -31,10 +33,24 @@ exports.getDigitSum = (n) => {
     .reduce((acc, digit) => acc + Number(digit), 0);
 };
 
+// Generates a fun fact based on the number's properties
 exports.getFunFact = (num) => {
-  if (exports.isArmstrong(num)) return `${num} is an Armstrong number!`;
-  if (exports.isPerfect(num)) return `${num} is a Perfect number!`;
+  if (exports.isArmstrong(num)) {
+    const digits = String(num).split("").map(Number);
+    const power = digits.length;
+    const calculation = digits.map((d) => `${d}^${power}`).join(" + ");
+    return `${num} is an Armstrong number because ${calculation} = ${num}`;
+  }
+
+  if (exports.isPerfect(num)) {
+    return `${num} is a Perfect number because the sum of its proper divisors equals ${num}.`;
+  }
+
+  if (exports.isPrime(num)) {
+    return `${num} is a Prime number because it is only divisible by 1 and itself.`;
+  }
+
   return num % 2 === 0
-    ? `${num} is an even number.`
-    : `${num} is an odd number.`;
+    ? `${num} is an Even number because it is divisible by 2.`
+    : `${num} is an Odd number because it is not divisible by 2.`;
 };
